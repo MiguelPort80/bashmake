@@ -1,0 +1,19 @@
+#!/bin/bash
+
+filename=$1
+if [[ $filename == "" ]];
+then
+    echo "Blank file name"
+else
+    
+#filename="$filename.sh"
+
+    touch $filename
+
+    echo "#!/bin/bash" >> $filename
+
+    chmod a+x $filename
+
+    vim $filename
+
+fi
